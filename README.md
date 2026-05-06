@@ -182,8 +182,6 @@ This work is inspired by:
 ## Authors
 
 - M RRUDRAMOORTHY
-- A HRUSHIKESH
-- C H VENKATA PRANAY
 
 Department of Electronics and Communication Engineering  
 RGUKT RK Valley
