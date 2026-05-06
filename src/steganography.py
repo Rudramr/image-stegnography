@@ -42,8 +42,8 @@ def feynman_extract(stego_pixel, cover_pixel):
 # ---------------------------------------------------------
 # Load and Prepare Images
 # ---------------------------------------------------------
-cover_img = Image.open("cover1.png").convert('L')
-secret_img = Image.open("secret.png").convert('L')
+cover_img = Image.open("images/cover1.png").convert('L')
+secret_img = Image.open("images/secret.png").convert('L')
 
 # Resize secret to match cover
 secret_img = secret_img.resize(cover_img.size)
@@ -62,7 +62,7 @@ for i in range(cover_array.shape[0]):
         stego_array[i, j] = feynman_embed(cover_array[i, j], secret_array[i, j])
 
 stego_img = Image.fromarray(stego_array.astype(np.uint8))
-stego_img.save("stego.png")
+stego_img.save("images/stego.png")
 
 # ---------------------------------------------------------
 # Extraction Phase
@@ -72,7 +72,7 @@ for i in range(stego_array.shape[0]):
         extracted_array[i, j] = feynman_extract(stego_array[i, j], cover_array[i, j])
 
 extracted_img = Image.fromarray(extracted_array.astype(np.uint8))
-extracted_img.save("extracted.png")
+extracted_img.save("images/extracted.png")
 
 # ---------------------------------------------------------
 # Quality Metrics
